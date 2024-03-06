@@ -55,6 +55,10 @@
     }   
     :root {
         --green : rgb(89, 108, 74) ;
+        --light-green : rgb(255, 254, 254) ;
+    }
+    * {
+        outline : none ;
     }
     img {
         width : 30vw ;
@@ -83,12 +87,13 @@
     }
     input {
         width : 20vw ;
-        border : 1px solid black ;
+        border : 1px solid rgb(229, 231, 235) ;
         border-radius: 5px ;
         height : 25px ;
+        background-color: var(--light-green);
     }
     label {
-        color : black ;
+        color : rgb(59, 68, 80) ;
         font-size : 12px ;
         margin : 5px ;
         margin-left: 0px ;
@@ -96,6 +101,20 @@
     .shadow {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+    input:focus {
+        outline: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border : 1px solid rgb(34, 83, 213) ;
+    }
+    input {
+        padding-left: 10px;
+        font-size: 16px ;
+        color: rgb(32, 32, 32) ;
+    }
+    body {
+        font-family: Arial, sans-serif;
+    }
+
     </style>
 </head>
 <body>
@@ -103,18 +122,30 @@
         <img src="halie-west-25xggax4bSA-unsplash.jpg" alt="" style = "display: block;">
     </div>
     <div style = "background-color: rgb(249, 250, 251); display: flex; align-items: center; justify-content: center; flex-direction: column;">
-        <p style = "margin-bottom : 50px ; padding : 40px ;">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora facere possimus neque, et sequi eos eligendi ut quaerat, iusto nemo distinctio harum, amet hic veritatis illum quasi explicabo esse voluptate!
-        </p>
-        <p style = "margin-bottom : 40px ; padding : 40px ;">
-            you know you want to
-        </p>
+        <div style = "padding-right : 200px ;
+        padding-left: 40px ;
+        position : absolute ;
+        top : 80px ;
+        font-weight:bold ;
+        font-size: 20px ;
+        margin-bottom: 30px ;
+        ">
+            <p>
+                This is not a real online service! You know you need something
+                like this in your life to help you realize your deepest dreams.
+                Sign up now to get started.
+            </p>
+            <br>
+            <p>
+                 you know you want to.
+            </p>
+        </div>
         <div style = "display: flex; align-items: center; justify-content: center; flex-direction: column;">
-            <div style = "background-color : white ; width : 70vw ; height : 35 vh ;">
+            <div style = "background-color : white ; width : 70vw ; height : 35 vh ;" class = "shadow">
                 <h1 style = "font-size: 20px ; margin-left: 40px ; margin-top : 10px ;">
                     Let's do this
                 </h1>
-                <form action="" method = "post" style = "height : 30vh ; display : flex ; flex : 1 ;" class = "shadow">
+                <form action="" method = "post" style = "height : 30vh ; display : flex ; flex : 1 ;" >
                     <fieldset>
                         <div class = "line">
                             <label for="first_name">FIRST NAME</label>
@@ -132,30 +163,34 @@
                         </div>
                         <div class = "line">
                             <label for="first_name">PHONE NUMBER</label>
-                            <input type="text">
+                            <input type="tel">
                         </div>
                     </fieldset>
                     <fieldset>
                         <div class = "line">
                             <label for="first_name">PASSWORD</label>
-                            <input type="text" required>
+                            <input type="password" required>
                         </div>
                         <div class = "line">
                             <label for="first_name">CONFIRM PASSWORD</label>
-                            <input type="text" required>
+                            <input type="password" required>
                         </div>
                     </fieldset>
                 </form>
             </div>
-            <button style = "width : 120px ; height : 40px ; border : 0px ; color : white ; background-color: rgb(89, 108, 74); margin : 30px ; border-radius : 5px ; font-weight: bold;">
-                Create Account
-            </button>
-            <p>
-                Already have an account ? 
-                <a style = "color : rgb(89, 108, 74) ;">
-                    Log in
-                </a>
-            </p>
+            <div style = "position : absolute ; 
+            top : 74% ;
+            left : 33.4% ;">
+                <button style = "width : 200px ; height : 40px ; border : 0px ; color : white ; background-color: rgb(89, 108, 74); border-radius : 5px ; font-weight: medium ; font-size: 16px; margin-bottom : 20px ;" type = "submit">
+                    Create Account
+                </button>
+                <p>
+                    Already have an account ? 
+                    <a style = "color : rgb(89, 108, 74) ;">
+                        Log in
+                    </a>
+                </p>
+            </div>
         </div>
     </div>
 </body>
